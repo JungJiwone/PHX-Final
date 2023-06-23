@@ -14,6 +14,6 @@
       datacenter: '{{ my_datacenter_name }}'
       cluster_name: PHX-Cluster
       enable: true
-      advanced_settings:
-        'TryBalanceVmsPerHost': '1'
+      advanced_settings:              # 고급 설정 옵션을 정의하는 섹션 
+        'TryBalanceVmsPerHost': '1'    # 가상 머신을 호스트 간에 균등하게 분산시키기 위해 한 호스트당 가상 머신 수를 1로 설정 
     delegate_to: localhost

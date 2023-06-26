@@ -14,7 +14,7 @@ Set-disk -Number $disknum -IsOffline $false
 # initailize disk partitionstyle
 Initialize-Disk -Number $disknum -PartitionStyle MBR
 
-New-Partition -DiskNumber $disknum -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel myDrive
+New-Partition -DiskNumber $disknum -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel iSCSI
 
 Get-Partition -DiskNumber $disknum | Set-Partition -NewDriveLetter $driveletter
 
